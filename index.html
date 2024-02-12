@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>probando flex</title>
+</head>
+<body>
+  <div class="contNav">
+    <nav>
+      <a href="#gallery">GALERIA</a>
+      <a href="#primero">PRIMERO</a>
+      <a href="#segundo">SEGUNDO</a>
+      <a href="#tercero">TERCERO</a>
+      <a href="#cuarto">CUARTO</a>
+      <a href="#quinto">QUINTO</a>
+     
+      
+    </nav>
+  </div>
+  <div class="contenedor" id="gallery">
+    <div class="pic"></div>
+    <div class="pic"></div>
+    <div class="pic"></div>
+  </div>
+  <h3 id="primero">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi vero at non mollitia nam fuga ea quo, sint consequuntur corrupti sapiente ducimus dolores reiciendis dolorum rerum, et totam, magnam aliquid ut facilis aperiam. Quod quae excepturi cumque laborum ratione! Amet ipsa repellendus animi perspiciatis deleniti totam culpa nobis magni?
+  
+   </h3>
+ <h3 id="segundo">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi vero at non mollitia nam fuga ea quo, sint consequuntur corrupti sapiente ducimus dolores reiciendis dolorum rerum, et totam, magnam aliquid ut facilis aperiam. Quod quae excepturi cumque laborum ratione! Amet ipsa repellendus animi perspiciatis deleniti totam culpa nobis magni?
+
+ </h3>
+ <h3 id="tercero">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi vero at non mollitia nam fuga ea quo, sint consequuntur corrupti sapiente ducimus dolores reiciendis dolorum rerum, et totam, magnam aliquid ut facilis aperiam. Quod quae excepturi cumque laborum ratione! Amet ipsa repellendus animi perspiciatis deleniti totam culpa nobis magni?
+
+ </h3>
+ <h3 id="cuarto">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi vero at non mollitia nam fuga ea quo, sint consequuntur corrupti sapiente ducimus dolores reiciendis dolorum rerum, et totam, magnam aliquid ut facilis aperiam. Quod quae excepturi cumque laborum ratione! Amet ipsa repellendus animi perspiciatis deleniti totam culpa nobis magni?
+
+ </h3>
+ <h3 id="quinto">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi vero at non mollitia nam fuga ea quo, sint consequuntur corrupti sapiente ducimus dolores reiciendis dolorum rerum, et totam, magnam aliquid ut facilis aperiam. Quod quae excepturi cumque laborum ratione! Amet ipsa repellendus animi perspiciatis deleniti totam culpa nobis magni?
+
+ </h3>
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      list-style: none;
+      text-decoration: none;
+      font-family:arial;
+    }
+     body{
+      position: relative;
+    /* max-width: 1440px; */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .contNav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  
+ 
+  }
+  .contNav nav{
+height: auto;
+    width: 30px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+    clip-path: polygon(0%45%,80%45%,100%50%,80%55%,0%55%);
+    transition: 0.5s ease;
+    animation: tick 1.5s linear infinite;
+  }
+  @keyframes tick{
+    0%{background-color: rgb(5, 144, 194);}
+    90%{background-color: transparent;}
+    100%{background-color: transparent;}
+  }
+  .contNav nav:hover{
+    width: 170px;
+    background-color: transparent;
+    clip-path: polygon(0%0%,80%0%,100%50%,80%100%,0%100%);
+    animation: unset;
+  }
+ 
+  .contNav nav a{
+ margin-left: 30px;
+ padding: 16px;
+ background-color: aquamarine;
+ color: black;
+ font-weight: 600;
+ letter-spacing: 2px;
+ transition: 0.5s ease;
+  }
+  .contNav nav a:hover{
+    filter: brightness(1.8);
+  }
+    .contenedor{
+      width: 100%;
+      min-height: 100vh;
+   
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+    .contenedor div{
+      width: 300px;
+      aspect-ratio: 1/1;
+      background-color: greenyellow;
+      border: 1px solid black;
+    }
+    h3{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+    }
+   
+
+  </style>
+
+</body>
+</html>
+
+
+ 
